@@ -1,0 +1,150 @@
+
+
+.titulito{
+    border-bottom: #004d4d solid 3px;
+}
+
+.app-body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:  	#A9A9A9;
+}
+
+/*Header*/
+header{
+    background-color: #004d4d;
+    color: white;
+}
+
+header img{
+   height: 50px;
+}
+
+/*Menu*/
+
+.link{
+    text-decoration: none;
+    color: grey;
+    padding: 3px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/*footer*/
+
+.copyright{
+    background-color: #004d4d;
+}
+
+/*Home*/
+.imagenSlider{
+    height: 650px;
+    width: 100vw;
+}
+
+.tituloslider{
+    font-size: 50px;
+}
+
+.textoslider{
+    font-size: 25px;
+}
+
+/*Prendas y calzado*/
+.titulo_prendas{
+    text-align: center;
+}
+
+.imagen_prenda{
+    width: 250px;
+}
+
+.carta{
+    border: solid black 2px;
+    cursor: pointer;
+    background-color: white;
+}
+
+/*Formulario*/
+.formulario{
+    border: solid 3px;
+}
+
+.boton_enviar{
+    background-color: #004d4d;
+    color: white;
+    border:#004d4d solid 2px;
+}
+
+.boton_enviar:hover{
+    background-color: #003333;
+    border:#003333 solid 2px;
+}
+
+
+.texto_dato{
+    font-size: 18px;
+}
+
+.lista_sugerencias{
+    text-align: center;
+    background-color: white;
+}
+
+.sugerencias_usuarios{
+    border: solid 3px;
+    background-color: white;
+}
+
+.sugerenciap{
+    text-decoration: underline 2px;
+    text-decoration-color: #004d4d;
+}
+
+@media (max-width: 1000px) {
+    .imagenSlider{
+        height: 350px;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .imagenSlider{
+        height: 250px;
+        width: 100vw;
+    }
+
+    .tituloslider{
+        font-size: 30px;
+    }
+
+    .textoslider{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .imagenSlider{
+        height: 200px;
+        width: 100vw;
+    }
+
+    .tituloslider{
+        font-size: 18px;
+    }
+
+    .textoslider{
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 400px) {
+    .carta{
+        height: 400px;
+    }
+}
