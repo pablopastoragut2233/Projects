@@ -1,0 +1,20 @@
+
+
+<div class="container-fluid contenedor">
+        <h2 class="text-white p-3 font-italic">Cursos disponibles</h2>
+        <div>
+            <div class="row d-flex justify-content-around">
+                
+                <div *ngFor="let item of items | async" class="card col-xl-2 col-lg-3 col-md-4 col-sm-5 m-3 carta ">
+                    <img class="card-img-top mt-2" src={{item.payload.val().foto}} alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <label><label class="card-title h4 titulo">{{item.payload.key}}</label> - {{item.payload.val().horas}}</label>    
+                        <div class="capa-texto"><p class="card-text">{{item.payload.val().info}}</p></div>
+                        <button (click)="servicio.inscribirse(item.payload.key)" *ngIf="item.payload.val().inscrito==false" class="btn boton-inscribir align-self-start">Inscribirse</button>
+                        <label *ngIf="item.payload.val().inscrito" class="font-italic text-white h5 mt-1 align-self-end">Inscrito <img src="assets/imagenes/checked.png" class="checked" alt="tick"></label>       
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,37 @@
+<div class="container-fluid contenedor">
+    <form #formUsuario="ngForm" class="formulario mt-5 mb-3" (ngSubmit)="onSubmit()">
+        <h2 class="text-white m-3 font-italic">Formulario de inscripción</h2>
+        <label for="nombre" class="h4 text-white">Nombre:</label><br>
+        <input type="text" name="nombre" #nombre="ngModel" class="inputtext p-2" [(ngModel)]="usuario.nombre"><br>
+        <label for="email" class="mt-3 h4 text-white">Email:</label><br>
+        <input type="text" name="email" #email="ngModel" class="inputtext p-2" [(ngModel)]="usuario.email"><br>
+        <label for="plan" class="mt-3 mr-3 h4 text-white">Planing:</label>
+        <select name="plan" #plan="ngModel" class="select p-1 mt-4" [(ngModel)]="usuario.plan">
+            <option value="Standard" selected>Standard</option>
+            <option value="Business">Business</option>
+            <option value="Proplayer">Proplayer</option>
+        </select><br>
+        <input type="submit" data-toggle="modal" data-target="#myModal" class="boton_enviar m-3 mt-3 mb-3 btn" value="Enviar">
+    </form>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Usuario inscrito en la bbdd</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Nombre: {{usuario.nombre}}</p>
+                <p>Email: {{usuario.email}}</p>
+                <p>Planing: {{usuario.plan}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>  
+
+</div>

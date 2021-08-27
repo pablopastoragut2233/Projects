@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+    <h2 class="text-white p-3 font-italic">Cursos dado de alta</h2>
+    <div class="row d-flex justify-content-center mt-3 contenedor">
+        
+        <ng-container *ngFor="let item of items | async">
+        
+        <div *ngIf="item.payload.val().inscrito" class="col-lg-5 capa_inscrito m-2">
+            <div>
+                <img src="{{item.payload.val().foto}}" class="imagen_inscrito mt-2 mr-3" alt="curso">
+                <div class="h4 mt-1 curso_texto">Curso de {{item.payload.key}}</div>
+                <button (click)="servicio.Darse_de_baja(item.payload.key)" class="btn boton_baja mb-2 mt-1 font-italic">Darse de baja</button>
+                <p class="inscribciones ml-1">Inscrito el {{item.payload.val().fecha}} </p>
+            </div>
+        </div>
+
+        </ng-container>
+
+    </div>
+
+</div>
